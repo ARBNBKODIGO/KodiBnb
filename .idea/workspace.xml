@@ -6,7 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="b35f4aa8-c1f1-4a8d-9595-32dcc5d365db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/access/ISingUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/access/ISingUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/access/SingIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/access/SingIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/access/SingUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/access/SingUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/booking/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/booking/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/payment/paymentMethods/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/payment/paymentMethods/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/payment/paymentMethods/IPaymentMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/payment/paymentMethods/IPaymentMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/payment/paymentMethods/PayPall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/payment/paymentMethods/PayPall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/payment/paymentMethods/PaymentMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/payment/paymentMethods/PaymentMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/property/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/property/Property.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/store/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/UsersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/UsersList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +37,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="developing" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -36,16 +55,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.KodiBnb.entity.payment" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvncom.spotify.fmt:fmt-maven-plugin:format" />
+      <command value="mvn com.spotify.fmt:fmt-maven-plugin:format" />
+    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

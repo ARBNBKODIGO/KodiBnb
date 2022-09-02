@@ -4,14 +4,14 @@ import com.KodiBnb.entity.access.SingUp;
 
 public class Client extends SingUp {
 
-    /*
-    + Reservar
+  /*
+  + Reservar
 
-    + Rentar
+  + Rentar
 
-    + Cancelar reservacion(RESERVA)
+  + Cancelar reservacion(RESERVA)
 
-    + Cancelar renta
-     */
+  + Cancelar renta
+   */
 
 }
