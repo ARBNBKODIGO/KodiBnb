@@ -7,14 +7,10 @@ import lombok.Setter;
 public class Property {
 
   private Booking[] bookings;
-  @Getter @Setter
-  private String address;
-  @Getter @Setter
-  private double cost;
-  @Getter @Setter
-  private int capacity;
-  @Getter @Setter
-  private boolean availability;
+  @Getter @Setter private String address;
+  @Getter @Setter private double cost;
+  @Getter @Setter private int capacity;
+  @Getter @Setter private boolean availability;
 
   public Booking[] getBookings() {
     return bookings;
@@ -23,6 +19,4 @@ public class Property {
   public void setBookings(Booking[] bookings) {
     this.bookings = bookings;
   }
-
-
 }
