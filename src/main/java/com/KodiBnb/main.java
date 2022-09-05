@@ -1,6 +1,7 @@
 package com.KodiBnb;
 
 import com.KodiBnb.entity.access.Login;
+import com.KodiBnb.utils.UsersPreregistered;
 
 import java.util.Scanner;
 
@@ -9,6 +10,8 @@ public class main {
 
     int option;
     Scanner sc = new Scanner(System.in);
+    App.getApp();
+    UsersPreregistered.loadOldUsers();
 
     while(true) {
       try {
@@ -28,42 +31,10 @@ public class main {
           System.out.println("Please input a valid option");}
         if(option == 0) break;
         if(option == 1) {
-          String email;
-          String password;
-          sc.nextLine();
-          System.out.println("Input your email");
-          email = sc.nextLine();
-          System.out.println("Input your password");
-          password = sc.nextLine();
-          Login.singIn(email,password);
+          Login.singIn();
         }
         if(option == 2) {
-          try{
-            String name;
-            String email;
-            String password;
-            String celphone;
-            int userType;
-            sc.nextLine();
-            System.out.println("Input your name");
-            name = sc.nextLine();
-            System.out.println("Input your email");
-            email = sc.nextLine();
-            System.out.println("Input your password");
-            password = sc.nextLine();
-            System.out.println("Input your celphone");
-            celphone = sc.nextLine();
-            System.out.println("What king of user do you want to be");
-            System.out.println("""
-                    Input 1 for be a Client 
-                    Input 2 for be a Supplier""");
-            userType = sc.nextInt();
-            if(userType >= 1 && userType <= 2) Login.singUp(name,email,password,celphone, userType);
-            else throw new RuntimeException();
-          }
-          catch (Exception e){
-            System.out.println("Please enter a valid data: " + e);
-          }
+          Login.singUp();
         }
 
       } catch (Exception e) {
