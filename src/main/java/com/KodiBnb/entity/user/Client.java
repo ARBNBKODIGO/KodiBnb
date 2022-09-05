@@ -1,10 +1,12 @@
 package com.KodiBnb.entity.user;
 
-import com.KodiBnb.entity.access.SingUp;
+public class Client extends User {
+    public Client(String name, String email, String password, String celphone) {
+        super(name, email, password, celphone);
+    }
 
-public class Client extends SingUp {
 
-  /*
+    /*
   + Reservar
 
   + Rentar
@@ -14,4 +16,10 @@ public class Client extends SingUp {
   + Cancelar renta
    */
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name=" + getName() +
+                "}";
+    }
 }

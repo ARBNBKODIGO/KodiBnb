@@ -1,6 +1,6 @@
 package com.KodiBnb.entity.property;
 
-import com.KodiBnb.entity.booking.Booking;
+import com.KodiBnb.entity.access.booking.Booking;
 import lombok.Getter;
 import lombok.Setter;
 

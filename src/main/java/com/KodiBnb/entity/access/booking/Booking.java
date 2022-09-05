@@ -1,4 +1,4 @@
-package com.KodiBnb.entity.booking;
+package com.KodiBnb.entity.access.booking;
 
 import com.KodiBnb.entity.property.Property;
 import com.KodiBnb.entity.user.Client;
