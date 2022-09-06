@@ -23,7 +23,7 @@ public class Supplier extends User {
   public void addOldProperty(Property property)
   {
     properties.add(property);
-    Store.addOldPropertyStore(property);
+    Store.addPropertyStore(property);
   }
 
   public void addNewProperty(){
@@ -38,8 +38,10 @@ public class Supplier extends User {
     System.out.println("Input property's capacity");
     capacity = sc.nextInt();
 
-    this.properties.add(new Property(address, cost, capacity));
+    Property newProperty = new Property(address,cost,capacity);
 
+    properties.add(newProperty);
+    Store.addPropertyStore(newProperty);
   }
 
   public void deleteProperty(){

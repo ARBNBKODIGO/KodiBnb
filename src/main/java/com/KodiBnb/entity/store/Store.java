@@ -15,11 +15,9 @@ public class Store {
     return result;
   }
 
-  public static void addOldPropertyStore(Property property){
+  public static void addPropertyStore(Property property){
     propertiesList.add(property);
   }
-
-
 
 
 }
