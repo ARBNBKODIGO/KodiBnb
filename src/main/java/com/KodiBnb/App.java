@@ -1,5 +1,7 @@
 package com.KodiBnb;
 
+import com.KodiBnb.entity.user.Client;
+import com.KodiBnb.entity.user.Supplier;
 import com.KodiBnb.entity.user.User;
 
 import java.util.ArrayList;
@@ -47,13 +49,39 @@ public class App {
     public static void runApp(){
         int option;
         while (getUser() != null){
+            System.out.println("Hi " + user );
+            Scanner sc = new Scanner(System.in);
+            System.out.println(user.getClass());
+            try{
+                if(user.getClass() == Supplier.class){
+                    System.out.println("""
+                            Please input:
+                            0 - to log off
+                            1 - Add a new property
+                            2 - Delete a property                          
+                            """);
+                    option = sc.nextInt();
+                    if(option == 0) user.logOff();
+                    if(option == 1) ((Supplier) user).addNewProperty();
+                    if(option == 2) ((Supplier) user).deleteProperty();
 
-        System.out.println("app runing");
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Press 0 to log off");
-        option = sc.nextInt();
-        if(option == 0) user.logOff();
+                }
+                if(user.getClass() == Client.class){
+                    System.out.println("""
+                            Please input:
+                            0 - to log off
+                            1 - Add a new reservation
+                            2 - Cancel reservation                       
+                            """);
+                    option = sc.nextInt();
+                    if(option == 0) user.logOff();
+                }
+
+            }
+            catch (Exception e) {
+                System.out.println("Please input a number" + e);
+            }
+
         }
-
     }
 }

@@ -7,12 +7,9 @@
     <list default="true" id="b35f4aa8-c1f1-4a8d-9595-32dcc5d365db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/access/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/access/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/property/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/property/Property.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/IUsers.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/utils/UsersPreregistered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/utils/UsersPreregistered.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
