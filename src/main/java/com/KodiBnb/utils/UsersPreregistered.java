@@ -11,8 +11,8 @@ public class UsersPreregistered {
 
         Client client1 = new Client("jose", "jose@mail.com", "1234", "1111" );
         Supplier supplier1 = new Supplier("rodrigo", "rodrigo@mail.com", "4321", "2222" );
-        supplier1.addProperty(new Property("Cra 32", 200,2));
-        supplier1.addProperty(new Property("Cra 50", 500,4));
+        supplier1.addOldProperty(new Property("Cra 32", 200,2));
+        supplier1.addOldProperty(new Property("Cra 50", 500,4));
 
 
         App.addOldUsers(client1);

@@ -1,8 +1,10 @@
 package com.KodiBnb.entity.user;
 
+import com.KodiBnb.App;
 import com.KodiBnb.entity.property.Property;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Supplier extends User {
 
@@ -16,20 +18,28 @@ public class Supplier extends User {
     return properties;
   }
 
-  public void addProperty(Property property) {
-    this.properties.add(property);
+  public void addOldProperty(Property property) {
+    properties.add(property);
   }
 
-  public void deleteProperty(Property property){
+  public void addNewProperty(){
+    Scanner sc = new Scanner(System.in);
+    String address;
+    Double cost;
+    int capacity;
+    System.out.println("Input property's address");
+    address = sc.nextLine();
+    System.out.println("Input property's cost");
+    cost = sc.nextDouble();
+    System.out.println("Input property's capacity");
+    capacity = sc.nextInt();
+
+    this.properties.add(new Property(address, cost, capacity));
+
+  }
+
+  public void deleteProperty(){
     System.out.println("elimar");
   }
-
-  /*
-     Propiedades : PROPIEDAD[]
-
-  + Agregar propieadad(PROPIEDAD)
-
-  + Eliminar propiedad(PROPIEDAD)
-   */
 
 }
