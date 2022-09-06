@@ -9,13 +9,19 @@ import lombok.Setter;
 
 public class Booking {
 
-  @Getter @Setter private Property propiedad;
   @Getter @Setter private Date startDate;
   @Getter @Setter private Date endingDate;
-  @Getter @Setter private Client client;
-  @Getter @Setter private Supplier supplier;
 
-  private void accept() {}
+  public Booking(Date startDate, Date endingDate) {
+    this.startDate = startDate;
+    this.endingDate = endingDate;
+  }
 
-  private void decline() {}
+  @Override
+  public String toString() {
+    return "Booking{" +
+            "startDate=" + startDate +
+            ", endingDate=" + endingDate +
+            '}';
+  }
 }

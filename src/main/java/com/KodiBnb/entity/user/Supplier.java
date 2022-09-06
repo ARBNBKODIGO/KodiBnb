@@ -2,6 +2,8 @@ package com.KodiBnb.entity.user;
 
 import com.KodiBnb.App;
 import com.KodiBnb.entity.property.Property;
+import com.KodiBnb.entity.store.Store;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -18,8 +20,10 @@ public class Supplier extends User {
     return properties;
   }
 
-  public void addOldProperty(Property property) {
+  public void addOldProperty(Property property)
+  {
     properties.add(property);
+    Store.addOldPropertyStore(property);
   }
 
   public void addNewProperty(){
