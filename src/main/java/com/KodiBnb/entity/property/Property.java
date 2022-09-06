@@ -10,13 +10,12 @@ public class Property {
   @Getter @Setter private String address;
   @Getter @Setter private double cost;
   @Getter @Setter private int capacity;
-  @Getter @Setter private boolean availability;
 
-  public Booking[] getBookings() {
-    return bookings;
+  public Property(String address, double cost, int capacity) {
+    this.address = address;
+    this.cost = cost;
+    this.capacity = capacity;
   }
 
-  public void setBookings(Booking[] bookings) {
-    this.bookings = bookings;
-  }
+
 }

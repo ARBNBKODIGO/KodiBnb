@@ -12,6 +12,18 @@ public class Supplier extends User {
     super(name, email, password, celphone);
   }
 
+  public List<Property> getProperties() {
+    return properties;
+  }
+
+  public void addProperty(Property property) {
+    this.properties.add(property);
+  }
+
+  public void deleteProperty(Property property){
+    System.out.println("elimar");
+  }
+
   /*
      Propiedades : PROPIEDAD[]
 
