@@ -2,7 +2,6 @@ package com.KodiBnb.entity.access;
 
 import com.KodiBnb.App;
 import com.KodiBnb.entity.user.Client;
-import com.KodiBnb.entity.user.IUsers;
 import com.KodiBnb.entity.user.Supplier;
 import com.KodiBnb.entity.user.User;
 
@@ -55,6 +54,7 @@ public class Login {
 
 
     public static void singIn(){
+        boolean userFinded = false;
         Scanner sc = new Scanner(System.in);
         String email;
         String password;
@@ -65,13 +65,14 @@ public class Login {
 
         for (User user : App.getUsersList()) {
             if(user.getEmail().equals(email) && user.getPassword().equals(password)){
+                userFinded = true;
                 App.setUser(user);
                 App.runApp();
                 break;
             }
         }
 
-        System.out.println("wrong email or password");
+        if(!userFinded) System.out.println("wrong email or password");
     }
 
 

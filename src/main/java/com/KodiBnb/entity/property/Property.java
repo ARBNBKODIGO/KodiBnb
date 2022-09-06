@@ -17,5 +17,12 @@ public class Property {
     this.capacity = capacity;
   }
 
-
+  @Override
+  public String toString() {
+    return "Property{" +
+            "address='" + address + '\'' +
+            ", cost=" + cost +
+            ", capacity=" + capacity +
+            '}';
+  }
 }

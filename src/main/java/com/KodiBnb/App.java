@@ -1,6 +1,5 @@
 package com.KodiBnb;
 
-import com.KodiBnb.entity.user.IUsers;
 import com.KodiBnb.entity.user.User;
 
 import java.util.ArrayList;
@@ -51,11 +50,10 @@ public class App {
 
         System.out.println("app runing");
         Scanner sc = new Scanner(System.in);
-        System.out.println("Press 0 to finish");
+        System.out.println("Press 0 to log off");
         option = sc.nextInt();
-        if(option == 0) break;
+        if(option == 0) user.logOff();
         }
 
-        System.out.println("closed session");
     }
 }

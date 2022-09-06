@@ -16,10 +16,4 @@ public class Client extends User {
   + Cancelar renta
    */
 
-    @Override
-    public String toString() {
-        return "Client{" +
-                "name=" + getName() +
-                "}";
-    }
 }

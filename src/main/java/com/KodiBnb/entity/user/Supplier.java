@@ -32,11 +32,4 @@ public class Supplier extends User {
   + Eliminar propiedad(PROPIEDAD)
    */
 
-  @Override
-  public String toString() {
-    return "Supplier{" +
-            "name=" + getName() +
-            "properties=" + properties +
-            '}';
-  }
 }
