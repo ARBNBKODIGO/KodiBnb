@@ -4,9 +4,11 @@ import com.KodiBnb.entity.booking.Booking;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 public class Property {
 
-  private Booking[] bookings;
+  private List<Booking> bookings;
   @Getter @Setter private String address;
   @Getter @Setter private double cost;
   @Getter @Setter private int capacity;
