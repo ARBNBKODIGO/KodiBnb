@@ -42,8 +42,13 @@ public class Supplier extends User {
 
   }
 
-  public void deleteProperty(){
-    System.out.println("elimar");
+  public void deletePropertyMenu(){
+    System.out.println("From the" + (properties.size()) + "properties above, please, write the number of the property to be deleted\n" +
+            "You will need to pick a number from 1 to" + properties.size());
+  }
+  public void deleteProperty(int position){
+
+    properties.remove(position);
   }
 
 }
