@@ -37,9 +37,7 @@ public class Supplier extends User {
     cost = sc.nextDouble();
     System.out.println("Input property's capacity");
     capacity = sc.nextInt();
-
     Property newProperty = new Property(address,cost,capacity);
-
     properties.add(newProperty);
     Store.addPropertyStore(newProperty);
   }
