@@ -20,6 +20,14 @@ public class Store {
   }
 
 
+  public void showPropertyList(){
+    System.out.println("Select the property you want: ");
+    for(int i = 0; i < propertiesList.size(); i++){
+      System.out.println(i + " - " + propertiesList.get(i));
+    }
+  }
+
+
 
 
 }
