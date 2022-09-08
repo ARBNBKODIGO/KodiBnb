@@ -65,7 +65,7 @@ public class App {
                     option = sc.nextInt();
                     if(option == 0) user.logOff();
                     if(option == 1) ((Supplier) user).addNewProperty();
-                    if(option == 2) ((Supplier) user).deleteProperty();
+                    if(option == 2) ((Supplier) user).deletePropertyMenu();
 
                 }
                 if(user.getClass() == Client.class){
