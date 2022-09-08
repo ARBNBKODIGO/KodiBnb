@@ -46,4 +46,11 @@ public class Supplier extends User {
     System.out.println("elimar");
   }
 
+  @Override
+  public String toString() {
+    return "Supplier{" +
+            "name= " + getName() +
+            "email= " + getEmail() +
+            '}';
+  }
 }

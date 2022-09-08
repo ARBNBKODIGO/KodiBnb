@@ -1,5 +1,6 @@
 package com.KodiBnb;
 
+import com.KodiBnb.entity.store.Store;
 import com.KodiBnb.entity.user.Client;
 import com.KodiBnb.entity.user.Supplier;
 import com.KodiBnb.entity.user.User;
@@ -49,7 +50,8 @@ public class App {
     public static void runApp(){
         int option;
         while (getUser() != null){
-            System.out.println("Hi " + user );
+            if(user.getClass() == Client.class) System.out.println("Hi " + ((Client) user));
+            if(user.getClass() == Supplier.class) System.out.println("Hi " + ((Supplier) user));
             Scanner sc = new Scanner(System.in);
             System.out.println(user.getClass());
             try{
@@ -75,6 +77,7 @@ public class App {
                             """);
                     option = sc.nextInt();
                     if(option == 0) user.logOff();
+                    if(option == 1) Store.setBooking();
                 }
 
             }
