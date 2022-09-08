@@ -14,7 +14,6 @@ public class UsersPreregistered {
         supplier1.addOldProperty(new Property("Cra 32", 200,2));
         supplier1.addOldProperty(new Property("Cra 50", 500,4));
 
-
         App.addOldUsers(client1);
         App.addOldUsers(supplier1);
 
