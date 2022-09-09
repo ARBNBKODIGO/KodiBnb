@@ -46,12 +46,12 @@ public class Property {
 
   public void validateBooking(Date startDate, Date endDate){
     boolean validBooking = true;
-    if(bookings.size()>1){
+    if(bookings.size()>=1){
       for (Booking booking: bookings){
-        if(startDate.compareTo(booking.getStartDate()) >= 0
-                && startDate.compareTo(booking.getEndingDate()) <= 0
-                && endDate.compareTo(booking.getStartDate()) >= 0
-                && endDate.compareTo(booking.getEndingDate()) <= 0){
+        if((startDate.compareTo(booking.getStartDate()) >= 0
+                && startDate.compareTo(booking.getEndingDate()) <= 0) ||
+                (endDate.compareTo(booking.getStartDate()) >= 0
+                && endDate.compareTo(booking.getEndingDate()) <= 0)){
           validBooking = false;
           break;
         }
@@ -63,6 +63,7 @@ public class Property {
       showBookings();
     }
     else System.out.println("The selected dates are not available");
+    showBookings();
   }
 
   public void addBooking(Booking booking){
