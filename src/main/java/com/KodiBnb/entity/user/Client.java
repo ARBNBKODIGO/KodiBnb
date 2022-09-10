@@ -62,6 +62,51 @@ public class Client extends User {
         }
     }
 
+    public void showPropertyBookings() {
+        for (int i = 0; i < myBookings.size(); i++) {
+            System.out.println(i + "- " + myBookings.get(i));
+            myBookings.get(i).showBookings();
+            System.out.println("-----");
+        }
+    }
+
+    public void deleteBooking(){
+        while (true){
+            try{
+                int option;
+                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                Scanner sc = new Scanner(System.in);
+                System.out.println("""
+                        Select:
+                        0- To go Back
+                        1- To delete a reservation""");
+                option = sc.nextInt();
+                if(option < 0 || option > 1) throw new Exception();
+                if(option == 0) break;
+                try{
+                    System.out.println("Propertys with bookings");
+                    showPropertyBookings();
+                    System.out.println("Please enter the number of the property you " +
+                            "wish to cancel the reservation for");
+                    sc.nextLine();
+                    option = sc.nextInt();
+                    if(option < 0 || option >= myBookings.size()) throw new Exception();
+                    myBookings.get(option).deleteBooking();
+
+                } catch (Exception e) {
+                    System.out.println("Please enter a valid option");
+                }
+
+
+            } catch (Exception e){
+                System.out.println("Please enter a valid option");
+            }
+
+        }
+
+
+    }
+
     @Override
     public String toString() {
         return "Client{" +

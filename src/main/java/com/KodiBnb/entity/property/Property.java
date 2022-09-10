@@ -4,9 +4,7 @@ import com.KodiBnb.entity.booking.Booking;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class Property {
 
@@ -33,9 +31,8 @@ public class Property {
   public void showBookings(){
     System.out.println("Active Bookings of the property: ");
     try {
-      for (Booking booking: bookings
-      ) {
-        System.out.println(booking);
+      for (int i = 0; i < bookings.size(); i++) {
+        System.out.println(i + "- " + bookings.get(i));
       }
     }
     catch (Exception e){
@@ -64,6 +61,31 @@ public class Property {
     }
     else System.out.println("The selected dates are not available");
     showBookings();
+  }
+
+  public void deleteBooking(){
+    while(true){
+      try {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of the reservation you want to cancel");
+        showBookings();
+        if(bookings.size() == 0) break;
+        System.out.println();
+        int numberBooking = sc.nextInt();
+        if(numberBooking < 0 || numberBooking >= bookings.size()) throw new Exception();
+        bookings.set(numberBooking, null);
+        cleanBookingList();
+
+      } catch (Exception e){
+        System.out.println("Invalid option");
+      }
+
+    }
+  }
+
+
+  public void cleanBookingList() {
+    bookings.removeIf(Objects::isNull);
   }
 
   public void addBooking(Booking booking){

@@ -37,7 +37,7 @@ public class Store {
     Scanner sc = new Scanner(System.in);
     try {
       int propertyNumber = sc.nextInt();
-      if(propertyNumber < 0 || propertyNumber > propertiesList.size()) throw new Exception();
+      if(propertyNumber < 0 || propertyNumber >= propertiesList.size()) throw new Exception();
       ((Client) App.getUser()).makeBooking(propertiesList.get(propertyNumber));
     }
     catch (Exception e){

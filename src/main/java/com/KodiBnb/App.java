@@ -78,6 +78,7 @@ public class App {
                     option = sc.nextInt();
                     if(option == 0) user.logOff();
                     if(option == 1) Store.setBooking();
+                    if(option == 2) ((Client) user).deleteBooking();
                 }
 
             }
