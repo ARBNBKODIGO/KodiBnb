@@ -24,6 +24,7 @@ public class Client extends User {
         while (true){
             try{
                 int option;
+                double price = property.getCost();
                 SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
                 Scanner sc = new Scanner(System.in);
                 System.out.println("""
@@ -49,7 +50,7 @@ public class Client extends User {
                     System.out.println(starDateString+ "---" + endingDateString);
                     Date startDate = sdf.parse(starDateString);
                     Date endingDate = sdf.parse(endingDateString);
-                    property.validateBooking(startDate,endingDate);
+                    property.validateBooking(startDate,endingDate,price);
                 }
                 catch (Exception e){
                     System.out.println("Please input a valid format dd-MM-yyyy" + e);

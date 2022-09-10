@@ -24,40 +24,40 @@ public class Card implements IPaymentMethods {
     obtenerDatos();
     if (validarDatos(datos)) {
       System.out.println(
-          "Se ha realizado el pago de su KodiBnB por un "
-              + "valor de $"
+          "The payment was completed for KodiBnb "
+              + "with a total of $ "
               + cost
-              + "\n Se ha descontado este monto de su tarjeta.");
+              + "\nThat charge has been deducted from your credit card.");
     } else {
       System.out.println(
-          "Datos no validos\n" + "El pago no se pudo realizar, intentelo nuevamente");
+          "Invalid information\n" + "Payment could not go through, try again please");
     }
   }
 
   public void obtenerDatos() {
 
-    System.out.println("Pago con tarjeta\n" + "Ingrese su numero de tarjeta sin espacios:");
+    System.out.println("Payment with card\n" + "Write the 16 digits of your credit card with no spaces:");
     Scanner leerDatos = new Scanner(System.in);
     cardNumber = leerDatos.nextLine();
     datos.add(cardNumber);
 
-    System.out.println("Ingrese la fecha de expiracion en formato 00/00:");
+    System.out.println("Enter the expiration date with the format MM/YY:");
     expirationDate = leerDatos.nextLine();
     datos.add(expirationDate);
 
-    System.out.println("Ingrese el CVC de tres digitos que esta en la parte posterior:");
+    System.out.println("Enter the security number located in the back of your card, its 3 digits:");
     CVC = leerDatos.nextLine();
     datos.add(CVC);
 
-    System.out.println("Ingrese el nombre que aparece en su tarjeta:");
+    System.out.println("Enter the name on the card:");
     nameOwner = leerDatos.nextLine();
     datos.add(nameOwner);
 
-    System.out.println("Ingrese su direccion de facturacion:");
+    System.out.println("Enter the billing address:");
     email = leerDatos.nextLine();
     datos.add(email);
 
-    System.out.println("Ingrese su email:");
+    System.out.println("Enter your email:");
     direccioinFacturacion = leerDatos.nextLine();
     datos.add(direccioinFacturacion);
   }

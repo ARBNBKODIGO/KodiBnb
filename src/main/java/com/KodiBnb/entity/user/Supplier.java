@@ -43,12 +43,46 @@ public class Supplier extends User {
   }
 
   public void deletePropertyMenu(){
-    System.out.println("From the" + (properties.size()) + "properties above, please, write the number of the property to be deleted\n" +
-            "You will need to pick a number from 1 to" + properties.size());
+    try {
+      if(properties.size() == 0){
+        System.out.println("No properties available");
+      } else if (properties.size() >= 1){
+        getProperties();
+        Scanner scanner = new Scanner(System.in);
+        String repeat;
+        int position;
+        System.out.println("From the " + (properties.size()) + " properties above, please, write the number of the property to be deleted\n" +
+                "You will need to pick a number between 1 and " + properties.size() + " being 1 the first on the list");
+        position = scanner.nextInt();
+        setPropertyNull(position);
+        deleteProperty();
+        Store.deletePropertyStore();
+        System.out.printf("Property deleted");
+        getProperties();
+        System.out.println("Would you like to delete another property? Y/N");
+        repeat = scanner.nextLine();
+        if(repeat == "Y"){
+          deletePropertyMenu();
+        } else if (repeat == "N"){
+          System.out.println("Session Ended");
+        } else {
+          System.out.println("Please enter a valid response");
+        }
+      }
+    } catch (Exception e){
+      System.out.println("Please Enter a valid option" + e);
+    }
   }
-  public void deleteProperty(int position){
+  public void setPropertyNull(int position){
+    properties.set(position, null);
+  }
 
-    properties.remove(position);
+  public void deleteProperty(){
+    for (int i = 0; i < properties.size(); i++) {
+      if(properties.get(i) == null){
+        properties.remove(i);
+      }
+    }
   }
 
   @Override

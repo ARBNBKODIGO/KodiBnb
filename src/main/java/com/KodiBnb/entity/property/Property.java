@@ -1,12 +1,14 @@
 package com.KodiBnb.entity.property;
 
 import com.KodiBnb.entity.booking.Booking;
+import com.KodiBnb.entity.payment.paymentMethods.PaymentMethods;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Property {
 
@@ -44,8 +46,9 @@ public class Property {
 
   }
 
-  public void validateBooking(Date startDate, Date endDate){
+  public void validateBooking(Date startDate, Date endDate, double price){
     boolean validBooking = true;
+    double totalPrice;
     if(bookings.size()>=1){
       for (Booking booking: bookings){
         if((startDate.compareTo(booking.getStartDate()) >= 0
@@ -60,7 +63,12 @@ public class Property {
     }
     if(validBooking){
       addBooking(new Booking(startDate, endDate));
-      showBookings();
+      long timeDiff = Math.abs(startDate.getTime() - endDate.getTime());
+      long daysDiff = TimeUnit.DAYS.convert(timeDiff, TimeUnit.MILLISECONDS);
+
+      int days = (int)daysDiff;
+      totalPrice = days * price;
+      PaymentMethods.mostrarOpciones(totalPrice);
     }
     else System.out.println("The selected dates are not available");
     showBookings();
@@ -69,4 +77,6 @@ public class Property {
   public void addBooking(Booking booking){
     bookings.add(booking);
   }
+
+
 }

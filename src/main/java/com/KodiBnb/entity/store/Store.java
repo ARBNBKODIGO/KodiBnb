@@ -46,5 +46,13 @@ public class Store {
 
   }
 
+  public static void deletePropertyStore(){
+    for (int i = 0; i < propertiesList.size(); i++) {
+      if(propertiesList.get(i) == null){
+        propertiesList.remove(i);
+      }
+    }
+  }
+
 
 }
