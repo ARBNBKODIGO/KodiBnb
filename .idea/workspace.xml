@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b35f4aa8-c1f1-4a8d-9595-32dcc5d365db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/property/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/property/Property.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/KodiBnb/entity/user/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
     "last_opened_file_path": "D:/Programacao/Proyectos/Airbnb/KodiBnb",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.KodiBnb.entity.payment" />
