@@ -4,7 +4,7 @@ import com.KodiBnb.App;
 import lombok.Getter;
 import lombok.Setter;
 
-public class User {
+public abstract class User {
 
     @Getter @Setter
     private String name;

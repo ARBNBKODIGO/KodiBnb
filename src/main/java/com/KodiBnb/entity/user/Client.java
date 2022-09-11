@@ -1,11 +1,9 @@
 package com.KodiBnb.entity.user;
 
-import com.KodiBnb.entity.booking.Booking;
 import com.KodiBnb.entity.property.Property;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -38,14 +36,13 @@ public class Client extends User {
 
                 try {
                     property.showBookings();
-                    System.out.println("Please enter a date that has not been taken");
                     String starDateString;
                     String endingDateString;
                     sc.nextLine();
-                    System.out.println("enter the start date of the reservation");
+                    System.out.println("Enter the start date of the reservation");
                     starDateString = sc.nextLine();
 
-                    System.out.println("enter the end date of the reservation");
+                    System.out.println("Enter the end date of the reservation");
                     endingDateString = sc.nextLine();
                     System.out.println(starDateString+ "---" + endingDateString);
                     Date startDate = sdf.parse(starDateString);
@@ -63,12 +60,17 @@ public class Client extends User {
         }
     }
 
-    public void showPropertyBookings() {
+    public boolean showPropertyBookings() {
+        if(myBookings.size() == 0) {
+            System.out.println("No properties reserved");
+            return false;
+        }
         for (int i = 0; i < myBookings.size(); i++) {
             System.out.println(i + "- " + myBookings.get(i));
             myBookings.get(i).showBookings();
             System.out.println("-----");
         }
+        return true;
     }
 
     public void deleteBooking(){
@@ -86,7 +88,7 @@ public class Client extends User {
                 if(option == 0) break;
                 try{
                     System.out.println("Propertys with bookings");
-                    showPropertyBookings();
+                    if(!showPropertyBookings()) continue;
                     System.out.println("Please enter the number of the property you " +
                             "wish to cancel the reservation for");
                     sc.nextLine();

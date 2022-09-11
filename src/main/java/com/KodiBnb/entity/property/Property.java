@@ -1,7 +1,9 @@
 package com.KodiBnb.entity.property;
 
+import com.KodiBnb.App;
 import com.KodiBnb.entity.booking.Booking;
 import com.KodiBnb.entity.payment.paymentMethods.PaymentMethods;
+import com.KodiBnb.entity.user.Client;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -32,16 +34,14 @@ public class Property {
 
   public void showBookings(){
     System.out.println("Active Bookings of the property: ");
-    try {
-      for (int i = 0; i < bookings.size(); i++) {
+    for (int i = 0; i < bookings.size(); i++) {
         System.out.println(i + "- " + bookings.get(i));
       }
-    }
-    catch (Exception e){
-      System.out.println("There is not active bookings in the property");
+    if(bookings.size() == 0)System.out.println("There is not active bookings in the property");
+    System.out.println("__________");
     }
 
-  }
+
 
   public void validateBooking(Date startDate, Date endDate, double price){
     boolean validBooking = true;
@@ -59,14 +59,19 @@ public class Property {
 
     }
     if(validBooking){
-      addBooking(new Booking(startDate, endDate));
+      bookings.add(new Booking(startDate, endDate));
+      ((Client) App.getUser()).getMyBookings().add(this);
+      System.out.println(this);
       long timeDiff = Math.abs(startDate.getTime() - endDate.getTime());
       long daysDiff = TimeUnit.DAYS.convert(timeDiff, TimeUnit.MILLISECONDS);
       int days = (int)daysDiff;
       totalPrice = days * price;
       PaymentMethods.mostrarOpciones(totalPrice);
     }
-    else System.out.println("The selected dates are not available");
+    else{
+      System.out.println("The selected dates are not available");
+      System.out.println("________");
+    }
     showBookings();
   }
 
@@ -81,7 +86,10 @@ public class Property {
         int numberBooking = sc.nextInt();
         if(numberBooking < 0 || numberBooking >= bookings.size()) throw new Exception();
         bookings.set(numberBooking, null);
-        cleanBookingList();
+        bookings.removeIf(Objects::isNull);
+        ((Client) App.getUser()).getMyBookings().remove(this);
+        System.out.println(this);
+        System.out.println("Booking have been canceled");
 
       } catch (Exception e){
         System.out.println("Invalid option");
@@ -91,11 +99,4 @@ public class Property {
   }
 
 
-  public void cleanBookingList() {
-    bookings.removeIf(Objects::isNull);
-  }
-
-  public void addBooking(Booking booking){
-    bookings.add(booking);
-  }
 }
